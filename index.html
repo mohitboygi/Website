@@ -1,555 +1,498 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Mohit Corp — Building the Future with AI</title>
 
-  <meta
-    name="description"
-    content="Mohit Corp is an independent technology initiative founded by Mohit Yadav, building AI, software, education technology and automation products."
-  />
+  <meta name="description" content="Mohit Corp is an independent technology initiative founded by Mohit Yadav, building AI, software, education technology and automation products.">
 
-  <meta name="theme-color" content="#07111f" />
+  <meta name="keywords" content="Mohit Corp, Mohit Yadav, AI, Artificial Intelligence, software, education technology, automation, My AI, MyEdu">
+
+  <meta name="author" content="Mohit Yadav">
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://mohitcorporation.pntr.dev/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mohit Corp — Building the Future with AI">
+  <meta property="og:description" content="AI, software, education technology and automation products built by Mohit Yadav.">
+  <meta property="og:url" content="https://mohitcorporation.pntr.dev/">
+  <meta property="og:site_name" content="Mohit Corp">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Mohit Corp — Building the Future with AI">
+  <meta name="twitter:description" content="AI, software, education technology and automation products by Mohit Yadav.">
+
+  <!-- Organization + Person structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://mohitcorporation.pntr.dev/#organization",
+        "name": "Mohit Corp",
+        "url": "https://mohitcorporation.pntr.dev/",
+        "founder": {
+          "@id": "https://mohitcorporation.pntr.dev/#mohit-yadav"
+        },
+        "description": "An independent technology initiative building AI, software, education technology and automation products."
+      },
+      {
+        "@type": "Person",
+        "@id": "https://mohitcorporation.pntr.dev/#mohit-yadav",
+        "name": "Mohit Yadav",
+        "url": "https://mohitcorporation.pntr.dev/",
+        "jobTitle": "Founder",
+        "worksFor": {
+          "@id": "https://mohitcorporation.pntr.dev/#organization"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/mohityadavofficial/",
+          "https://www.instagram.com/mohityadavoffical/",
+          "https://x.com/mohityadavreal"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://mohitcorporation.pntr.dev/#website",
+        "url": "https://mohitcorporation.pntr.dev/",
+        "name": "Mohit Corp",
+        "publisher": {
+          "@id": "https://mohitcorporation.pntr.dev/#organization"
+        }
+      }
+    ]
+  }
+  </script>
 
   <style>
-    :root{
-      --bg:#050b14;
-      --bg2:#07111f;
-      --card:rgba(12,25,43,.72);
-      --line:rgba(120,180,255,.14);
-      --text:#f3f8ff;
-      --muted:#8ea4bd;
-      --neon:#4ea8ff;
-      --neon2:#2d7dd2;
-      --white:#ffffff;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
+    html {
+      scroll-behavior: smooth;
     }
 
-    html{
-      scroll-behavior:smooth;
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #050b14;
+      color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
     }
 
-    body{
-      font-family:Inter,Arial,Helvetica,sans-serif;
-      background:
-        radial-gradient(circle at 15% 10%,rgba(45,125,210,.18),transparent 30%),
-        radial-gradient(circle at 85% 25%,rgba(78,168,255,.10),transparent 28%),
-        var(--bg);
-      color:var(--text);
-      line-height:1.6;
-      overflow-x:hidden;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
-    a{
-      color:inherit;
-      text-decoration:none;
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
     }
 
-    .container{
-      width:min(1120px,92%);
-      margin:auto;
+    /* NAVBAR */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(18px);
+      background: rgba(5, 11, 20, 0.78);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
-    /* NAV */
-
-    nav{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      backdrop-filter:blur(18px);
-      background:rgba(5,11,20,.72);
-      border-bottom:1px solid var(--line);
+    .nav-inner {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
-    .nav-inner{
-      min-height:72px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
     }
 
-    .logo{
-      font-size:21px;
-      font-weight:800;
-      letter-spacing:-.5px;
+    .logo span {
+      color: #2d7dd2;
     }
 
-    .logo span{
-      color:var(--neon);
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      font-size: 14px;
+      color: #b9c5d6;
     }
 
-    .nav-links{
-      display:flex;
-      gap:28px;
-      align-items:center;
-    }
-
-    .nav-links a{
-      color:var(--muted);
-      font-size:14px;
-      transition:.25s;
-    }
-
-    .nav-links a:hover{
-      color:var(--white);
+    .nav-links a:hover {
+      color: #ffffff;
     }
 
     /* HERO */
 
-    .hero{
-      min-height:88vh;
-      display:flex;
-      align-items:center;
-      position:relative;
+    .hero {
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(45,125,210,0.22), transparent 32%),
+        radial-gradient(circle at 80% 60%, rgba(45,125,210,0.12), transparent 30%);
     }
 
-    .hero::before{
-      content:"";
-      position:absolute;
-      width:420px;
-      height:420px;
-      border-radius:50%;
-      background:rgba(45,125,210,.13);
-      filter:blur(90px);
-      left:-180px;
-      top:120px;
-      pointer-events:none;
+    .hero-content {
+      max-width: 850px;
+      padding: 100px 0;
     }
 
-    .hero-content{
-      max-width:850px;
-      position:relative;
-      z-index:1;
+    .kicker {
+      color: #61a5ff;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
     }
 
-    .kicker{
-      color:var(--neon);
-      font-size:13px;
-      font-weight:700;
-      letter-spacing:2px;
-      text-transform:uppercase;
-      margin-bottom:22px;
+    h1 {
+      font-size: clamp(48px, 8vw, 92px);
+      line-height: 0.98;
+      letter-spacing: -4px;
+      margin-bottom: 28px;
     }
 
-    h1{
-      font-size:clamp(48px,8vw,88px);
-      line-height:.98;
-      letter-spacing:-4px;
-      max-width:850px;
-      margin-bottom:28px;
+    .hero p {
+      max-width: 680px;
+      font-size: 20px;
+      color: #aebbd0;
+      margin-bottom: 36px;
     }
 
-    .gradient-text{
-      background:linear-gradient(90deg,#fff,#69b7ff);
-      -webkit-background-clip:text;
-      background-clip:text;
-      color:transparent;
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
     }
 
-    .hero p{
-      color:var(--muted);
-      max-width:680px;
-      font-size:18px;
-      margin-bottom:34px;
+    .btn {
+      padding: 14px 22px;
+      border-radius: 10px;
+      font-weight: 700;
+      border: 1px solid rgba(255,255,255,0.12);
+      transition: 0.25s ease;
     }
 
-    .buttons{
-      display:flex;
-      flex-wrap:wrap;
-      gap:14px;
+    .btn-primary {
+      background: #2d7dd2;
+      box-shadow: 0 0 30px rgba(45,125,210,0.25);
     }
 
-    .btn{
-      padding:13px 21px;
-      border-radius:10px;
-      font-weight:700;
-      font-size:14px;
-      border:1px solid var(--line);
-      transition:.25s;
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 40px rgba(45,125,210,0.45);
     }
 
-    .btn-primary{
-      background:var(--neon2);
-      box-shadow:0 0 25px rgba(78,168,255,.22);
+    .btn-secondary {
+      background: rgba(255,255,255,0.04);
+      color: #dbe6f5;
     }
 
-    .btn-primary:hover{
-      transform:translateY(-2px);
-      box-shadow:0 0 35px rgba(78,168,255,.4);
-    }
-
-    .btn-secondary{
-      background:rgba(255,255,255,.03);
-      color:#d9e8f8;
-    }
-
-    .btn-secondary:hover{
-      background:rgba(255,255,255,.07);
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.08);
     }
 
     /* SECTIONS */
 
-    section{
-      padding:100px 0;
+    section {
+      padding: 100px 0;
     }
 
-    .section-heading{
-      margin-bottom:45px;
+    .section-label {
+      color: #61a5ff;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 12px;
     }
 
-    .eyebrow{
-      color:var(--neon);
-      text-transform:uppercase;
-      font-size:12px;
-      letter-spacing:2px;
-      font-weight:800;
-      margin-bottom:10px;
+    .section-title {
+      font-size: clamp(32px, 5vw, 54px);
+      letter-spacing: -2px;
+      margin-bottom: 16px;
     }
 
-    h2{
-      font-size:clamp(32px,5vw,52px);
-      letter-spacing:-2px;
-      line-height:1.05;
+    .section-subtitle {
+      color: #9eacc0;
+      max-width: 650px;
+      margin-bottom: 42px;
     }
 
-    .section-description{
-      margin-top:15px;
-      max-width:650px;
-      color:var(--muted);
+    /* CARDS */
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
     }
 
-    /* PRODUCTS */
-
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:18px;
+    .card {
+      background: rgba(255,255,255,0.035);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 28px;
+      transition: 0.25s ease;
+      backdrop-filter: blur(12px);
     }
 
-    .card{
-      background:linear-gradient(
-        145deg,
-        rgba(17,35,58,.82),
-        rgba(7,16,28,.75)
-      );
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:28px;
-      backdrop-filter:blur(14px);
-      transition:.3s;
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(45,125,210,0.5);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
     }
 
-    .card:hover{
-      transform:translateY(-5px);
-      border-color:rgba(78,168,255,.38);
-      box-shadow:0 15px 45px rgba(0,0,0,.25);
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
     }
 
-    .icon{
-      width:44px;
-      height:44px;
-      display:grid;
-      place-items:center;
-      border-radius:12px;
-      background:rgba(78,168,255,.10);
-      border:1px solid rgba(78,168,255,.18);
-      color:var(--neon);
-      font-weight:800;
-      margin-bottom:22px;
+    .card p {
+      color: #9eacc0;
+      font-size: 15px;
     }
 
-    .card h3{
-      margin-bottom:10px;
-      font-size:21px;
-    }
-
-    .card p{
-      color:var(--muted);
-      font-size:14px;
-    }
-
-    .card-link{
-      display:inline-block;
-      margin-top:20px;
-      color:var(--neon);
-      font-size:14px;
-      font-weight:700;
-    }
-
-    /* BUILD */
-
-    .build-grid{
-      display:grid;
-      grid-template-columns:repeat(5,1fr);
-      gap:12px;
-    }
-
-    .build-item{
-      padding:20px;
-      border:1px solid var(--line);
-      border-radius:14px;
-      color:#dbe9f7;
-      background:rgba(255,255,255,.025);
-      text-align:center;
-      font-size:14px;
+    .tag {
+      display: inline-block;
+      margin-bottom: 18px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #61a5ff;
+      font-weight: 700;
     }
 
     /* VISION */
 
-    .vision{
-      padding:75px 40px;
-      border-radius:26px;
-      border:1px solid rgba(78,168,255,.18);
+    .vision {
+      text-align: center;
       background:
-        radial-gradient(circle at 50% 0%,rgba(78,168,255,.13),transparent 50%),
-        rgba(10,22,38,.7);
-      text-align:center;
+        radial-gradient(circle at center, rgba(45,125,210,0.13), transparent 45%);
     }
 
-    .vision h2{
-      max-width:800px;
-      margin:auto;
-    }
-
-    /* WHY */
-
-    .why-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:15px;
-    }
-
-    .why-item{
-      border-top:1px solid var(--line);
-      padding-top:20px;
-    }
-
-    .why-item strong{
-      display:block;
-      margin-bottom:8px;
-    }
-
-    .why-item p{
-      color:var(--muted);
-      font-size:14px;
+    .quote {
+      max-width: 850px;
+      margin: auto;
+      font-size: clamp(28px, 5vw, 52px);
+      line-height: 1.15;
+      font-weight: 700;
+      letter-spacing: -1.5px;
     }
 
     /* STATS */
 
-    .stats{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:15px;
-      margin-top:50px;
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
-    .stat{
-      padding:30px;
-      text-align:center;
-      border:1px solid var(--line);
-      border-radius:18px;
-      background:rgba(255,255,255,.025);
+    .stat {
+      padding: 38px 20px;
+      text-align: center;
+      border-right: 1px solid rgba(255,255,255,0.08);
     }
 
-    .stat-number{
-      font-size:40px;
-      font-weight:800;
-      color:var(--neon);
-      margin-bottom:5px;
+    .stat:last-child {
+      border-right: none;
     }
 
-    .stat-label{
-      color:var(--muted);
-      font-size:14px;
+    .stat strong {
+      display: block;
+      font-size: 38px;
+      color: #61a5ff;
+      margin-bottom: 5px;
+    }
+
+    .stat span {
+      color: #8998ad;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     /* FOUNDER */
 
-    .founder{
-      display:flex;
-      align-items:center;
-      gap:20px;
-      padding:28px;
-      border-radius:20px;
-      background:linear-gradient(
-        135deg,
-        rgba(18,37,62,.8),
-        rgba(8,17,30,.8)
-      );
-      border:1px solid var(--line);
+    .founder {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 55px;
+      align-items: center;
     }
 
-    .founder-avatar{
-      width:72px;
-      height:72px;
-      border-radius:50%;
-      flex-shrink:0;
-      overflow:hidden;
-      background:linear-gradient(135deg,var(--neon),#1c3a6b);
-      box-shadow:
-        0 0 0 1px rgba(78,168,255,.3),
-        0 0 26px -6px rgba(78,168,255,.6);
+    .founder-photo {
+      width: 280px;
+      height: 330px;
+      object-fit: cover;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 25px 80px rgba(0,0,0,0.35);
     }
 
-    .founder-avatar img{
-      width:100%;
-      height:100%;
-      display:block;
-      object-fit:cover;
+    .founder h2 {
+      font-size: 48px;
+      letter-spacing: -2px;
+      margin-bottom: 6px;
     }
 
-    .founder-info h3{
-      margin-bottom:2px;
+    .founder-role {
+      color: #61a5ff;
+      font-weight: 700;
+      margin-bottom: 20px;
     }
 
-    .founder-info p{
-      color:var(--muted);
-      font-size:14px;
+    .founder-text {
+      color: #aab6c8;
+      max-width: 650px;
+      margin-bottom: 25px;
     }
 
-    .founder-email{
-      display:inline-block;
-      color:var(--neon);
-      font-size:14px;
-      margin-top:5px;
+    .socials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
-    /* SOCIAL */
-
-    .socials{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:15px;
+    .social {
+      padding: 9px 14px;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      font-size: 13px;
+      color: #b9c5d6;
     }
 
-    .social{
-      padding:8px 13px;
-      border-radius:8px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.025);
-      color:#cfe2f5;
-      font-size:13px;
-      transition:.25s;
-    }
-
-    .social:hover{
-      color:white;
-      border-color:rgba(78,168,255,.45);
-      transform:translateY(-2px);
+    .social:hover {
+      color: white;
+      border-color: #2d7dd2;
     }
 
     /* CONTACT */
 
-    .contact-box{
-      text-align:center;
-      padding:70px 25px;
-      border:1px solid var(--line);
-      border-radius:25px;
-      background:rgba(255,255,255,.025);
+    .contact-box {
+      padding: 55px;
+      border-radius: 22px;
+      background:
+        linear-gradient(135deg, rgba(45,125,210,0.16), rgba(255,255,255,0.025));
+      border: 1px solid rgba(255,255,255,0.09);
     }
 
-    .contact-box h2{
-      margin-bottom:15px;
+    .contact-box h2 {
+      font-size: 42px;
+      letter-spacing: -1.5px;
+      margin-bottom: 15px;
     }
 
-    .contact-box p{
-      color:var(--muted);
-      margin-bottom:22px;
+    .contact-box p {
+      color: #a4b0c1;
+      margin-bottom: 28px;
     }
 
-    .contact-email{
-      color:var(--neon);
-      font-weight:700;
-      display:inline-block;
-      margin-top:5px;
+    .email-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .email-list a {
+      color: #61a5ff;
+      word-break: break-word;
     }
 
     /* FOOTER */
 
-    footer{
-      padding:35px 0;
-      border-top:1px solid var(--line);
-      color:var(--muted);
-      font-size:13px;
+    footer {
+      padding: 45px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: #718096;
+      font-size: 13px;
     }
 
-    .footer-inner{
-      display:flex;
-      justify-content:space-between;
-      gap:20px;
-      flex-wrap:wrap;
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
-    /* MOBILE */
+    /* RESPONSIVE */
 
-    @media(max-width:850px){
+    @media (max-width: 800px) {
 
-      .nav-links{
-        display:none;
+      .nav-links {
+        display: none;
       }
 
-      .grid{
-        grid-template-columns:1fr;
+      .hero {
+        min-height: 80vh;
       }
 
-      .build-grid{
-        grid-template-columns:repeat(2,1fr);
+      .hero-content {
+        padding: 80px 0;
       }
 
-      .why-grid{
-        grid-template-columns:repeat(2,1fr);
+      h1 {
+        letter-spacing: -2px;
       }
 
-      .stats{
-        grid-template-columns:1fr;
+      .grid {
+        grid-template-columns: 1fr;
       }
 
-      h1{
-        letter-spacing:-2.5px;
+      .stats {
+        grid-template-columns: 1fr;
       }
 
-      section{
-        padding:75px 0;
-      }
-    }
-
-    @media(max-width:520px){
-
-      .hero{
-        min-height:82vh;
+      .stat {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
       }
 
-      .hero p{
-        font-size:16px;
+      .stat:last-child {
+        border-bottom: none;
       }
 
-      .build-grid{
-        grid-template-columns:1fr;
+      .founder {
+        grid-template-columns: 1fr;
       }
 
-      .why-grid{
-        grid-template-columns:1fr;
+      .founder-photo {
+        width: 100%;
+        max-width: 280px;
+        height: 330px;
       }
 
-      .founder{
-        align-items:flex-start;
+      .founder h2 {
+        font-size: 38px;
       }
 
-      .vision{
-        padding:50px 22px;
+      .contact-box {
+        padding: 30px;
       }
 
-      .footer-inner{
-        flex-direction:column;
+      .contact-box h2 {
+        font-size: 34px;
       }
     }
   </style>
@@ -592,8 +535,7 @@
           </div>
 
           <h1>
-            Building the
-            <span class="gradient-text">future with AI.</span>
+            Building the future with AI.
           </h1>
 
           <p>
@@ -622,82 +564,104 @@
     <!-- PRODUCTS -->
 
     <section id="products">
+
       <div class="container">
 
-        <div class="section-heading">
-          <div class="eyebrow">Products</div>
-
-          <h2>Ideas becoming products.</h2>
-
-          <p class="section-description">
-            Building practical technology across AI, education and software.
-          </p>
+        <div class="section-label">
+          Products
         </div>
 
+        <h2 class="section-title">
+          Technology built for people.
+        </h2>
+
+        <p class="section-subtitle">
+          Practical products designed around AI, education,
+          productivity and the future of software.
+        </p>
 
         <div class="grid">
 
-          <article class="card">
+          <div class="card">
 
-            <div class="icon">AI</div>
+            <span class="tag">
+              Personal AI
+            </span>
 
-            <h3>My AI</h3>
+            <h3>
+              My AI
+            </h3>
 
             <p>
-              A personal AI assistant designed to make powerful AI tools
-              simple and accessible.
+              A personal AI experience designed to bring powerful
+              artificial intelligence tools into one simple platform.
             </p>
+
+            <br>
 
             <a
               href="https://mohitboygi.github.io/M1"
+              class="btn btn-secondary"
               target="_blank"
               rel="noopener"
-              class="card-link"
             >
               Open My AI →
             </a>
 
-          </article>
+          </div>
 
 
-          <article class="card">
+          <div class="card">
 
-            <div class="icon">ED</div>
+            <span class="tag">
+              Education
+            </span>
 
-            <h3>EduAI / MyEdu</h3>
+            <h3>
+              EduAI / MyEdu
+            </h3>
 
             <p>
-              An education technology platform connecting students,
-              teachers, parents and AI-powered learning.
+              An education technology platform focused on students,
+              teachers, parents and smarter learning experiences.
             </p>
 
-            <span class="card-link">
+            <br>
+
+            <span class="tag">
               In Development
             </span>
 
-          </article>
+          </div>
 
 
-          <article class="card">
+          <div class="card">
 
-            <div class="icon">+</div>
+            <span class="tag">
+              Future
+            </span>
 
-            <h3>Future Products</h3>
+            <h3>
+              Future Products
+            </h3>
 
             <p>
-              More technology products and experiments are currently
-              being designed and developed.
+              More AI, software and automation products are currently
+              being explored and developed.
             </p>
 
-            <span class="card-link">
+            <br>
+
+            <span class="tag">
               Coming Soon
             </span>
 
-          </article>
+          </div>
 
         </div>
 
       </div>
+
     </section>
 
 
@@ -707,38 +671,62 @@
 
       <div class="container">
 
-        <div class="section-heading">
-          <div class="eyebrow">What We Build</div>
-
-          <h2>Technology without limits.</h2>
-
-          <p class="section-description">
-            Exploring technology that can solve real-world problems
-            and create better experiences.
-          </p>
+        <div class="section-label">
+          Capabilities
         </div>
 
+        <h2 class="section-title">
+          Built around technology.
+        </h2>
 
-        <div class="build-grid">
+        <p class="section-subtitle">
+          Areas where Mohit Corp is building, experimenting and
+          creating new products.
+        </p>
 
-          <div class="build-item">
-            Artificial Intelligence
+        <div class="grid">
+
+          <div class="card">
+            <h3>Artificial Intelligence</h3>
+            <p>
+              AI assistants, intelligent applications and
+              AI-powered experiences.
+            </p>
           </div>
 
-          <div class="build-item">
-            Software
+          <div class="card">
+            <h3>Software</h3>
+            <p>
+              Modern web applications, platforms and digital tools.
+            </p>
           </div>
 
-          <div class="build-item">
-            Education Technology
+          <div class="card">
+            <h3>Education Technology</h3>
+            <p>
+              Technology designed to improve learning and education.
+            </p>
           </div>
 
-          <div class="build-item">
-            Developer Tools
+          <div class="card">
+            <h3>Developer Tools</h3>
+            <p>
+              Tools and systems designed to help people build faster.
+            </p>
           </div>
 
-          <div class="build-item">
-            Automation
+          <div class="card">
+            <h3>Automation</h3>
+            <p>
+              Intelligent workflows and automation for real-world use.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Future Technology</h3>
+            <p>
+              Exploring new ideas at the intersection of AI and software.
+            </p>
           </div>
 
         </div>
@@ -750,20 +738,16 @@
 
     <!-- VISION -->
 
-    <section id="vision">
+    <section id="vision" class="vision">
 
       <div class="container">
 
-        <div class="vision">
+        <div class="section-label">
+          Vision
+        </div>
 
-          <div class="eyebrow">
-            Our Vision
-          </div>
-
-          <h2>
-            “Make powerful technology accessible to everyone.”
-          </h2>
-
+        <div class="quote">
+          “Make powerful technology accessible to everyone.”
         </div>
 
       </div>
@@ -777,69 +761,72 @@
 
       <div class="container">
 
-        <div class="section-heading">
-
-          <div class="eyebrow">
-            Why Mohit Corp
-          </div>
-
-          <h2>
-            Built with purpose.
-          </h2>
-
+        <div class="section-label">
+          Why Mohit Corp
         </div>
 
+        <h2 class="section-title">
+          Technology without unnecessary barriers.
+        </h2>
 
-        <div class="why-grid">
+        <div class="grid">
 
-          <div class="why-item">
-            <strong>AI-first</strong>
+          <div class="card">
+            <h3>AI-first</h3>
             <p>
-              AI is at the core of the products we build.
+              Artificial intelligence is at the center of our product thinking.
             </p>
           </div>
 
-          <div class="why-item">
-            <strong>User-focused</strong>
+          <div class="card">
+            <h3>User-focused</h3>
             <p>
-              Technology should be simple and useful.
+              Products are designed around real people and real problems.
             </p>
           </div>
 
-          <div class="why-item">
-            <strong>Affordable</strong>
+          <div class="card">
+            <h3>Affordable</h3>
             <p>
-              Powerful technology should not be limited by price.
+              Powerful technology should not be limited to people with huge budgets.
             </p>
           </div>
 
-          <div class="why-item">
-            <strong>Built for scale</strong>
+          <div class="card">
+            <h3>Built for scale</h3>
             <p>
-              Projects are designed with future growth in mind.
+              We think about scalable systems from the beginning.
             </p>
           </div>
 
         </div>
 
+      </div>
+
+    </section>
+
+
+    <!-- STATS -->
+
+    <section>
+
+      <div class="container">
 
         <div class="stats">
 
           <div class="stat">
-            <div class="stat-number">2026</div>
-            <div class="stat-label">Founded</div>
+            <strong>2026</strong>
+            <span>Founded</span>
           </div>
 
           <div class="stat">
-            <div class="stat-number">2+</div>
-            <div class="stat-label">Products & Projects</div>
+            <strong>2+</strong>
+            <span>Products & Projects</span>
           </div>
 
           <div class="stat">
-            <div class="stat-number">∞</div>
-            <div class="stat-label">
-              Technology for everyone
-            </div>
+            <strong>∞</strong>
+            <span>Technology for Everyone</span>
           </div>
 
         </div>
@@ -855,89 +842,68 @@
 
       <div class="container">
 
-        <div class="section-heading">
-
-          <div class="eyebrow">
-            Founder
-          </div>
-
-          <h2>
-            Meet the person behind Mohit Corp.
-          </h2>
-
+        <div class="section-label">
+          Founder
         </div>
-
 
         <div class="founder">
 
-          <!-- PHOTO: image.jpg -->
+          <img
+            src="file_0000000048d8820ea68bc93f1fafb7f9.png"
+            alt="Mohit Yadav — Founder of Mohit Corp"
+            class="founder-photo"
+          >
 
-          <div class="founder-avatar">
+          <div>
 
-            <img
-              src="file_0000000048d8820ea68bc93f1fafb7f9.png"
-              alt="Mohit Yadav — Founder of Mohit Corp"
-            />
-
-          </div>
-
-
-          <div class="founder-info">
-
-            <h3>
+            <h2>
               Mohit Yadav
-            </h3>
+            </h2>
 
-            <p>
+            <div class="founder-role">
               Founder, Mohit Corp
+            </div>
+
+            <p class="founder-text">
+              Mohit Yadav is the founder of Mohit Corp, an independent
+              technology initiative focused on artificial intelligence,
+              software, education technology and automation.
             </p>
-
-            <a
-              class="founder-email"
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=mohityadavaicorp@gmail.com"
-              target="_blank"
-              rel="noopener"
-            >
-              mohityadavaicorp@gmail.com
-            </a>
-
-
-            <!-- SOCIAL MEDIA -->
 
             <div class="socials">
 
               <a
-                class="social"
                 href="https://www.linkedin.com/in/mohityadavofficial/"
                 target="_blank"
                 rel="noopener"
+                class="social"
               >
                 LinkedIn
               </a>
 
               <a
-                class="social"
                 href="https://www.instagram.com/mohityadavoffical/"
                 target="_blank"
                 rel="noopener"
+                class="social"
               >
                 Instagram
               </a>
 
               <a
-                class="social"
                 href="https://x.com/mohityadavreal"
                 target="_blank"
                 rel="noopener"
+                class="social"
               >
                 X
               </a>
 
               <a
-                class="social"
                 href="https://mohitboygi.github.io/M1"
                 target="_blank"
                 rel="noopener"
+                class="social"
               >
                 My AI
               </a>
@@ -961,39 +927,38 @@
 
         <div class="contact-box">
 
-          <div class="eyebrow">
+          <div class="section-label">
             Contact
           </div>
 
           <h2>
-            Let's build something.
+            Let's build the future.
           </h2>
 
           <p>
-            Have an idea, collaboration or project?
+            Have an idea, collaboration opportunity or technology project?
             Get in touch.
           </p>
 
+          <div class="email-list">
 
-          <a
-            class="contact-email"
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=connect@mohitcorporation.pntr.dev"
-            target="_blank"
-            rel="noopener"
-          >
-            connect@mohitcorporation.pntr.dev
-          </a>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=connect@mohitcorporation.pntr.dev"
+              target="_blank"
+              rel="noopener"
+            >
+              connect@mohitcorporation.pntr.dev
+            </a>
 
-          <br />
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=mohityadavaicorp@gmail.com"
+              target="_blank"
+              rel="noopener"
+            >
+              mohityadavaicorp@gmail.com
+            </a>
 
-          <a
-            class="contact-email"
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=mohityadavaicorp@gmail.com"
-            target="_blank"
-            rel="noopener"
-          >
-            Founder: mohityadavaicorp@gmail.com
-          </a>
+          </div>
 
         </div>
 
