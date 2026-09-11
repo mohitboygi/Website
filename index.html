@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Mohit Corp — Building the Future with AI</title>
+
+  <meta
+    name="description"
+    content="Mohit Corp is an independent technology initiative founded by Mohit Yadav, building AI, software, education technology and automation products."
+  />
+
+  <meta name="theme-color" content="#07111f" />
+
+  <style>
+    :root{
+      --bg:#050b14;
+      --bg2:#07111f;
+      --card:rgba(12,25,43,.72);
+      --line:rgba(120,180,255,.14);
+      --text:#f3f8ff;
+      --muted:#8ea4bd;
+      --neon:#4ea8ff;
+      --neon2:#2d7dd2;
+      --white:#ffffff;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:Inter,Arial,Helvetica,sans-serif;
+      background:
+        radial-gradient(circle at 15% 10%,rgba(45,125,210,.18),transparent 30%),
+        radial-gradient(circle at 85% 25%,rgba(78,168,255,.10),transparent 28%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .container{
+      width:min(1120px,92%);
+      margin:auto;
+    }
+
+    /* NAV */
+
+    nav{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      backdrop-filter:blur(18px);
+      background:rgba(5,11,20,.72);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav-inner{
+      min-height:72px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .logo{
+      font-size:21px;
+      font-weight:800;
+      letter-spacing:-.5px;
+    }
+
+    .logo span{
+      color:var(--neon);
+    }
+
+    .nav-links{
+      display:flex;
+      gap:28px;
+      align-items:center;
+    }
+
+    .nav-links a{
+      color:var(--muted);
+      font-size:14px;
+      transition:.25s;
+    }
+
+    .nav-links a:hover{
+      color:var(--white);
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height:88vh;
+      display:flex;
+      align-items:center;
+      position:relative;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      width:420px;
+      height:420px;
+      border-radius:50%;
+      background:rgba(45,125,210,.13);
+      filter:blur(90px);
+      left:-180px;
+      top:120px;
+      pointer-events:none;
+    }
+
+    .hero-content{
+      max-width:850px;
+      position:relative;
+      z-index:1;
+    }
+
+    .kicker{
+      color:var(--neon);
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:22px;
+    }
+
+    h1{
+      font-size:clamp(48px,8vw,88px);
+      line-height:.98;
+      letter-spacing:-4px;
+      max-width:850px;
+      margin-bottom:28px;
+    }
+
+    .gradient-text{
+      background:linear-gradient(90deg,#fff,#69b7ff);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .hero p{
+      color:var(--muted);
+      max-width:680px;
+      font-size:18px;
+      margin-bottom:34px;
+    }
+
+    .buttons{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+    }
+
+    .btn{
+      padding:13px 21px;
+      border-radius:10px;
+      font-weight:700;
+      font-size:14px;
+      border:1px solid var(--line);
+      transition:.25s;
+    }
+
+    .btn-primary{
+      background:var(--neon2);
+      box-shadow:0 0 25px rgba(78,168,255,.22);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-2px);
+      box-shadow:0 0 35px rgba(78,168,255,.4);
+    }
+
+    .btn-secondary{
+      background:rgba(255,255,255,.03);
+      color:#d9e8f8;
+    }
+
+    .btn-secondary:hover{
+      background:rgba(255,255,255,.07);
+    }
+
+    /* SECTIONS */
+
+    section{
+      padding:100px 0;
+    }
+
+    .section-heading{
+      margin-bottom:45px;
+    }
+
+    .eyebrow{
+      color:var(--neon);
+      text-transform:uppercase;
+      font-size:12px;
+      letter-spacing:2px;
+      font-weight:800;
+      margin-bottom:10px;
+    }
+
+    h2{
+      font-size:clamp(32px,5vw,52px);
+      letter-spacing:-2px;
+      line-height:1.05;
+    }
+
+    .section-description{
+      margin-top:15px;
+      max-width:650px;
+      color:var(--muted);
+    }
+
+    /* PRODUCTS */
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .card{
+      background:linear-gradient(
+        145deg,
+        rgba(17,35,58,.82),
+        rgba(7,16,28,.75)
+      );
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:28px;
+      backdrop-filter:blur(14px);
+      transition:.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+      border-color:rgba(78,168,255,.38);
+      box-shadow:0 15px 45px rgba(0,0,0,.25);
+    }
+
+    .icon{
+      width:44px;
+      height:44px;
+      display:grid;
+      place-items:center;
+      border-radius:12px;
+      background:rgba(78,168,255,.10);
+      border:1px solid rgba(78,168,255,.18);
+      color:var(--neon);
+      font-weight:800;
+      margin-bottom:22px;
+    }
+
+    .card h3{
+      margin-bottom:10px;
+      font-size:21px;
+    }
+
+    .card p{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .card-link{
+      display:inline-block;
+      margin-top:20px;
+      color:var(--neon);
+      font-size:14px;
+      font-weight:700;
+    }
+
+    /* BUILD */
+
+    .build-grid{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:12px;
+    }
+
+    .build-item{
+      padding:20px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      color:#dbe9f7;
+      background:rgba(255,255,255,.025);
+      text-align:center;
+      font-size:14px;
+    }
+
+    /* VISION */
+
+    .vision{
+      padding:75px 40px;
+      border-radius:26px;
+      border:1px solid rgba(78,168,255,.18);
+      background:
+        radial-gradient(circle at 50% 0%,rgba(78,168,255,.13),transparent 50%),
+        rgba(10,22,38,.7);
+      text-align:center;
+    }
+
+    .vision h2{
+      max-width:800px;
+      margin:auto;
+    }
+
+    /* WHY */
+
+    .why-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:15px;
+    }
+
+    .why-item{
+      border-top:1px solid var(--line);
+      padding-top:20px;
+    }
+
+    .why-item strong{
+      display:block;
+      margin-bottom:8px;
+    }
+
+    .why-item p{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    /* STATS */
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:15px;
+      margin-top:50px;
+    }
+
+    .stat{
+      padding:30px;
+      text-align:center;
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:rgba(255,255,255,.025);
+    }
+
+    .stat-number{
+      font-size:40px;
+      font-weight:800;
+      color:var(--neon);
+      margin-bottom:5px;
+    }
+
+    .stat-label{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    /* FOUNDER */
+
+    .founder{
+      display:flex;
+      align-items:center;
+      gap:20px;
+      padding:28px;
+      border-radius:20px;
+      background:linear-gradient(
+        135deg,
+        rgba(18,37,62,.8),
+        rgba(8,17,30,.8)
+      );
+      border:1px solid var(--line);
+    }
+
+    .founder-avatar{
+      width:72px;
+      height:72px;
+      border-radius:50%;
+      flex-shrink:0;
+      overflow:hidden;
+      background:linear-gradient(135deg,var(--neon),#1c3a6b);
+      box-shadow:
+        0 0 0 1px rgba(78,168,255,.3),
+        0 0 26px -6px rgba(78,168,255,.6);
+    }
+
+    .founder-avatar img{
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit:cover;
+    }
+
+    .founder-info h3{
+      margin-bottom:2px;
+    }
+
+    .founder-info p{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .founder-email{
+      display:inline-block;
+      color:var(--neon);
+      font-size:14px;
+      margin-top:5px;
+    }
+
+    /* SOCIAL */
+
+    .socials{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:15px;
+    }
+
+    .social{
+      padding:8px 13px;
+      border-radius:8px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.025);
+      color:#cfe2f5;
+      font-size:13px;
+      transition:.25s;
+    }
+
+    .social:hover{
+      color:white;
+      border-color:rgba(78,168,255,.45);
+      transform:translateY(-2px);
+    }
+
+    /* CONTACT */
+
+    .contact-box{
+      text-align:center;
+      padding:70px 25px;
+      border:1px solid var(--line);
+      border-radius:25px;
+      background:rgba(255,255,255,.025);
+    }
+
+    .contact-box h2{
+      margin-bottom:15px;
+    }
+
+    .contact-box p{
+      color:var(--muted);
+      margin-bottom:22px;
+    }
+
+    .contact-email{
+      color:var(--neon);
+      font-weight:700;
+      display:inline-block;
+      margin-top:5px;
+    }
+
+    /* FOOTER */
+
+    footer{
+      padding:35px 0;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .footer-inner{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:850px){
+
+      .nav-links{
+        display:none;
+      }
+
+      .grid{
+        grid-template-columns:1fr;
+      }
+
+      .build-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .why-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .stats{
+        grid-template-columns:1fr;
+      }
+
+      h1{
+        letter-spacing:-2.5px;
+      }
+
+      section{
+        padding:75px 0;
+      }
+    }
+
+    @media(max-width:520px){
+
+      .hero{
+        min-height:82vh;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .build-grid{
+        grid-template-columns:1fr;
+      }
+
+      .why-grid{
+        grid-template-columns:1fr;
+      }
+
+      .founder{
+        align-items:flex-start;
+      }
+
+      .vision{
+        padding:50px 22px;
+      }
+
+      .footer-inner{
+        flex-direction:column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+    <div class="container nav-inner">
+
+      <a href="#" class="logo">
+        Mohit<span>Corp</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#products">Products</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#vision">Vision</a>
+        <a href="#founder">Founder</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+
+  <main>
+
+    <section class="hero">
+      <div class="container">
+
+        <div class="hero-content">
+
+          <div class="kicker">
+            Mohit Corp · Independent Technology Initiative · Est. 2026
+          </div>
+
+          <h1>
+            Building the
+            <span class="gradient-text">future with AI.</span>
+          </h1>
+
+          <p>
+            Intelligent products, bold ideas, and real-world impact —
+            made to put powerful technology in everyone's hands.
+          </p>
+
+          <div class="buttons">
+
+            <a href="#products" class="btn btn-primary">
+              Explore Products
+            </a>
+
+            <a href="#founder" class="btn btn-secondary">
+              Meet the Founder
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- PRODUCTS -->
+
+    <section id="products">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="eyebrow">Products</div>
+
+          <h2>Ideas becoming products.</h2>
+
+          <p class="section-description">
+            Building practical technology across AI, education and software.
+          </p>
+        </div>
+
+
+        <div class="grid">
+
+          <article class="card">
+
+            <div class="icon">AI</div>
+
+            <h3>My AI</h3>
+
+            <p>
+              A personal AI assistant designed to make powerful AI tools
+              simple and accessible.
+            </p>
+
+            <a
+              href="https://mohitboygi.github.io/M1"
+              target="_blank"
+              rel="noopener"
+              class="card-link"
+            >
+              Open My AI →
+            </a>
+
+          </article>
+
+
+          <article class="card">
+
+            <div class="icon">ED</div>
+
+            <h3>EduAI / MyEdu</h3>
+
+            <p>
+              An education technology platform connecting students,
+              teachers, parents and AI-powered learning.
+            </p>
+
+            <span class="card-link">
+              In Development
+            </span>
+
+          </article>
+
+
+          <article class="card">
+
+            <div class="icon">+</div>
+
+            <h3>Future Products</h3>
+
+            <p>
+              More technology products and experiments are currently
+              being designed and developed.
+            </p>
+
+            <span class="card-link">
+              Coming Soon
+            </span>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CAPABILITIES -->
+
+    <section id="capabilities">
+
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="eyebrow">What We Build</div>
+
+          <h2>Technology without limits.</h2>
+
+          <p class="section-description">
+            Exploring technology that can solve real-world problems
+            and create better experiences.
+          </p>
+        </div>
+
+
+        <div class="build-grid">
+
+          <div class="build-item">
+            Artificial Intelligence
+          </div>
+
+          <div class="build-item">
+            Software
+          </div>
+
+          <div class="build-item">
+            Education Technology
+          </div>
+
+          <div class="build-item">
+            Developer Tools
+          </div>
+
+          <div class="build-item">
+            Automation
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- VISION -->
+
+    <section id="vision">
+
+      <div class="container">
+
+        <div class="vision">
+
+          <div class="eyebrow">
+            Our Vision
+          </div>
+
+          <h2>
+            “Make powerful technology accessible to everyone.”
+          </h2>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- WHY -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="eyebrow">
+            Why Mohit Corp
+          </div>
+
+          <h2>
+            Built with purpose.
+          </h2>
+
+        </div>
+
+
+        <div class="why-grid">
+
+          <div class="why-item">
+            <strong>AI-first</strong>
+            <p>
+              AI is at the core of the products we build.
+            </p>
+          </div>
+
+          <div class="why-item">
+            <strong>User-focused</strong>
+            <p>
+              Technology should be simple and useful.
+            </p>
+          </div>
+
+          <div class="why-item">
+            <strong>Affordable</strong>
+            <p>
+              Powerful technology should not be limited by price.
+            </p>
+          </div>
+
+          <div class="why-item">
+            <strong>Built for scale</strong>
+            <p>
+              Projects are designed with future growth in mind.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="stats">
+
+          <div class="stat">
+            <div class="stat-number">2026</div>
+            <div class="stat-label">Founded</div>
+          </div>
+
+          <div class="stat">
+            <div class="stat-number">2+</div>
+            <div class="stat-label">Products & Projects</div>
+          </div>
+
+          <div class="stat">
+            <div class="stat-number">∞</div>
+            <div class="stat-label">
+              Technology for everyone
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FOUNDER -->
+
+    <section id="founder">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="eyebrow">
+            Founder
+          </div>
+
+          <h2>
+            Meet the person behind Mohit Corp.
+          </h2>
+
+        </div>
+
+
+        <div class="founder">
+
+          <!-- PHOTO: image.jpg -->
+
+          <div class="founder-avatar">
+
+            <img
+              src="image.jpg"
+              alt="Mohit Yadav — Founder of Mohit Corp"
+            />
+
+          </div>
+
+
+          <div class="founder-info">
+
+            <h3>
+              Mohit Yadav
+            </h3>
+
+            <p>
+              Founder, Mohit Corp
+            </p>
+
+            <a
+              class="founder-email"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=mohityadavaicorp@gmail.com"
+              target="_blank"
+              rel="noopener"
+            >
+              mohityadavaicorp@gmail.com
+            </a>
+
+
+            <!-- SOCIAL MEDIA -->
+
+            <div class="socials">
+
+              <a
+                class="social"
+                href="https://www.linkedin.com/in/mohityadavofficial/"
+                target="_blank"
+                rel="noopener"
+              >
+                LinkedIn
+              </a>
+
+              <a
+                class="social"
+                href="https://www.instagram.com/mohityadavoffical/"
+                target="_blank"
+                rel="noopener"
+              >
+                Instagram
+              </a>
+
+              <a
+                class="social"
+                href="https://x.com/mohityadavreal"
+                target="_blank"
+                rel="noopener"
+              >
+                X
+              </a>
+
+              <a
+                class="social"
+                href="https://mohitboygi.github.io/M1"
+                target="_blank"
+                rel="noopener"
+              >
+                My AI
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+      <div class="container">
+
+        <div class="contact-box">
+
+          <div class="eyebrow">
+            Contact
+          </div>
+
+          <h2>
+            Let's build something.
+          </h2>
+
+          <p>
+            Have an idea, collaboration or project?
+            Get in touch.
+          </p>
+
+
+          <a
+            class="contact-email"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=connect@mohitcorporation.pntr.dev"
+            target="_blank"
+            rel="noopener"
+          >
+            connect@mohitcorporation.pntr.dev
+          </a>
+
+          <br />
+
+          <a
+            class="contact-email"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=mohityadavaicorp@gmail.com"
+            target="_blank"
+            rel="noopener"
+          >
+            Founder: mohityadavaicorp@gmail.com
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <div>
+        © 2026 Mohit Corp. All rights reserved.
+      </div>
+
+      <div>
+        Founded by Mohit Yadav · Building the future with AI.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
